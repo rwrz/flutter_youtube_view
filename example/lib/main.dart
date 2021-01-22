@@ -8,11 +8,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      routes: <String, WidgetBuilder>{
-        '/custom': (BuildContext context) => new YoutubeCustomWidget(),
-        '/non_custom': (BuildContext context) => new YoutubeDefaultWidget(),
-      },
-      home: HomeScreen()
+        routes: <String, WidgetBuilder>{
+          '/custom': (BuildContext context) => new YoutubeCustomWidget(),
+          '/non_custom': (BuildContext context) => new YoutubeDefaultWidget(),
+        },
+        home: HomeScreen()
     );
   }
 }

@@ -3,8 +3,8 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_youtube_view'
-  s.version          = '1.1.4'
-  s.summary          = 'A new Flutter plugin.'
+  s.version          = '1.1.5'
+  s.summary          = 'An Youtube View to play youtube videos on Flutter'
   s.description      = <<-DESC
 A new Flutter plugin.
                        DESC
@@ -17,6 +17,6 @@ A new Flutter plugin.
   s.dependency 'Flutter'
   s.dependency 'YoutubeKit'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 end
 

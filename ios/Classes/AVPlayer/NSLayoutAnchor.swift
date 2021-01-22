@@ -3,7 +3,7 @@ import UIKit
 public extension UIView {
     
     @available(iOS 6.0, *)
-    public func addConstraints(withFormat: String, views: UIView...) {
+    func addConstraints(withFormat: String, views: UIView...) {
         var viewsDictionary: [String: UIView] = [:]
         for (index, view) in views.enumerated() {
             let key = "v\(index)"
@@ -14,7 +14,7 @@ public extension UIView {
     }
     
     @available(iOS 9, *)
-    public func fillToSuperview() {
+    func fillToSuperview() {
         translatesAutoresizingMaskIntoConstraints = false
         if let superview = superview {
             leftAnchor.constraint(equalTo: superview.leftAnchor).isActive = true
@@ -25,7 +25,7 @@ public extension UIView {
     }
     
     @available(iOS 9, *)
-    public func fillHeightToSuperview(ratio: CGFloat) {
+    func fillHeightToSuperview(ratio: CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
         anchorCenterXToSuperview()
         if let superview = superview {
@@ -36,7 +36,7 @@ public extension UIView {
     }
     
     @available(iOS 9, *)
-    public func fillWidthToSuperview(ratio: CGFloat) {
+    func fillWidthToSuperview(ratio: CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
         if let superview = superview {
             topAnchor.constraint(equalTo: superview.topAnchor).isActive = true
@@ -48,7 +48,7 @@ public extension UIView {
     
     @available(iOS 9, *)
     @discardableResult
-    public func anchor(
+    func anchor(
         top: NSLayoutYAxisAnchor? = nil,
         left: NSLayoutXAxisAnchor? = nil,
         bottom: NSLayoutYAxisAnchor? = nil,
@@ -94,7 +94,7 @@ public extension UIView {
     }
     
     @available(iOS 9, *)
-    public func anchorCenterXToSuperview(constant: CGFloat = 0) {
+    func anchorCenterXToSuperview(constant: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false
         if let anchor = superview?.centerXAnchor {
             centerXAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
@@ -102,7 +102,7 @@ public extension UIView {
     }
     
     @available(iOS 9, *)
-    public func anchorCenterYToSuperview(constant: CGFloat = 0) {
+    func anchorCenterYToSuperview(constant: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false
         if let anchor = superview?.centerYAnchor {
             centerYAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
@@ -110,13 +110,13 @@ public extension UIView {
     }
     
     @available(iOS 9, *)
-    public func anchorCenterSuperview() {
+    func anchorCenterSuperview() {
         anchorCenterXToSuperview()
         anchorCenterYToSuperview()
     }
     
     @available(iOS 6.0, *)
-    public func removeAllAutoLayout() {
+    func removeAllAutoLayout() {
         for constraint in self.constraints {
             constraint.isActive = false
         }
